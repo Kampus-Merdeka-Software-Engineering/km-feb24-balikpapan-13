@@ -12,7 +12,7 @@ Welcome to the Superstore Dashboard! This project is designed to provide compreh
 Our project is a collaborative effort by the following team members:
 
 - **Julia Ressi Irrenova Yulistia**: Name, Role (Team Leader)
-- **Deni Kristanto**: Name, Role (Front-End Developer
+- **Deni Kristanto**: Name, Role (Front-End Developer)
 - **Defrizal Arif Rahma**: Name, Role (Front-End Developer)
 - **Melly Isnulsari**: Name, Role (Deployment)
 - **Akhirul Abqar**: Name, Role (Deployment)
