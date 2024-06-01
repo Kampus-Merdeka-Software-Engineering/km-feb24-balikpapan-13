@@ -48,7 +48,7 @@ nav a:hover {
 }
 
 .team-member {
-    background-color: white;
+    background-color: rgb(132, 193, 197);
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -65,7 +65,7 @@ flex-wrap: wrap; /* Wrap to the next line if there's not enough space */
 gap: 10px; /* Optional: Add space between items */
 }
 .mentors-member {
-    background-color: white;
+    background-color: rgb(255, 177, 9);
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -99,16 +99,16 @@ gap: 10px; /* Optional: Add space between items */
 .team-member h3 {
     font-size: 1.2em;
     margin: 10px 0 5px;
-    color: #2c3e50;
+    color: #ffffff;
 }
 .mentors-member h3 {
     font-size: 1.2em;
     margin: 10px 0 5px;
-    color: #2c3e50;
+    color: #395b7c;
 }
 .team-member p {
     margin: 5px 0;
-    color: #7f8c8d;
+    color: #000000;
 }
 .mentors-member p {
     margin: 5px 0;
@@ -121,7 +121,7 @@ gap: 10px; /* Optional: Add space between items */
     margin-top: 10px;
 }
 .team-member .social-icons a {
-    color: #0e76a8; /* LinkedIn color */
+    color: #093950; /* LinkedIn color */
     margin: 0 5px;
     text-decoration: none;
     font-size: 1.5em;
