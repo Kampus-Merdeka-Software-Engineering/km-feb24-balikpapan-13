@@ -13,21 +13,18 @@
             <img src="img/shopping_cart.png" alt="Superstore Logo">
             <h1>Superstore</h1>
         </div>
-        <form class="register-form" id="register-form">
+        <form class="register-form" id="register-form" action="">
             <input type="text" id="register-username" name="username" placeholder="Enter Username" required>
             <input type="email" id="register-email" name="email" placeholder="Enter Email" required>
             <input type="password" id="register-password" name="password" placeholder="Enter Password" required>
-            <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password" required>
+            <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirm Password" required>
             <button type="submit">Register</button>
         </form>
         <div class="login-link">
             <p>Already have an account? <a href="login.html">Login here</a></p>
         </div>
-        <div id="register-error-message" style="color: red; display: none;">Passwords do not match</div>
+        <div id="register-error-message" style="color: red; display: none;">Error message</div>
     </div>
-    <!--<div class="shopping-cart">
-        <img src="shopping_cart.png" alt="Shopping Cart">
-    </div>-->
+    <script src="js/script.js"></script>
 </body>
-<script src="js/script.js"></script>
 </html>

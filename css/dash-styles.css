@@ -1,0 +1,151 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #38ACEC;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* card */
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.cardBox .card {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cardBox .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 1em;
+    color: #38ACEC;
+}
+
+.cardBox .cardName {
+    color: black;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.cardBox .card .iconbox {
+    font-size: 2.5em;
+    color: black;
+}
+
+.cardBox .card:hover {
+    background: #38ACEC;
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconbox {
+    color: white;
+}
+
+/* Dashboard */
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 90%;
+    padding: 20px;
+    padding-top: 0;
+}
+
+.charts .chart {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    width: 100%;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Sidebar styles */
+aside {
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* Footer styles */
+footer {
+    background-color: #38ACEC;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+    header {
+        text-align: left;
+        padding: 10px;
+    }
+
+    .cardBox {
+        grid-template-columns: 1fr;
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 560px) {
+    .cardBox {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .cardBox {
+        width: 50%;
+    }
+}

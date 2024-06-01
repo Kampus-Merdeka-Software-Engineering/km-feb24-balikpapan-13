@@ -4,75 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superstore Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Add any CSS links or stylesheets here -->
+    <link rel="stylesheet" href="css/dash-styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="js/chart.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Welcome to Superstore Dashboard</h1>
+        <!-- Navigation -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Analytics</a></li>
+                <li><a href="dash.html">Analytics</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="main-content">
-            <article id="analytics-section">
-                <canvas id="myChart" style="width:100%;max-width:500px"></canvas>
-            </article>
+    <!-- cards -->
+    <div class="cardBox">
+        <div class="card">
+            <div>
+                <div class="numbers">$286,40 rb</div>
+                <div class="cardName">Total Profit</div>
+            </div>
+            <div class="iconbox">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">$2,30 jt</div>
+                <div class="cardName">Total Sales</div>
+            </div>
+            <div class="iconbox">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">5 rb</div>
+                <div class="cardName">Total Order</div>
+            </div>
+            <div class="iconbox">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">37.9 rb</div>
+                <div class="cardName">Unit terjual</div>
+            </div>
+            <div class="iconbox">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">793</div>
+                <div class="cardName">Jumlah Customer</div>
+            </div>
+            <div class="iconbox">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">16%</div>
+                <div class="cardName">Total Diskon</div>
+            </div>
+            <div class="iconbox">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
 
-            <article id="notifications-section">
-                <canvas id="barChart" style="width:100%;max-width:500px"></canvas>
-            </article>
+    <!-- Dashboard -->
+    <ul class="charts">
+        <div class="chart" id="linechart">
+            <canvas id="myChart1" style="width:100%;max-width:500px"></canvas>
+        </div>
+        <div class="chart" id="barChart">
+            <canvas id="myChart2" style="width:100%;max-width:500px"></canvas>
+        </div>
+    </ul>
 
-            <article id="tasks-section">
-                <canvas id="doughnutChart" style="width:100%;max-width:500px"></canvas>
-            </article>
+    <ul class="charts">
+        <div class="chart" id="barChart">
+            <canvas id="myChart3" style="width:100%;max-width:500px"></canvas>
+        </div>
+        <div class="chart" id="pieChart">
+            <canvas id="myChart4" style="width:100%;max-width:500px"></canvas>
+        </div>
+    </ul>
 
-            <article id="calendar-section">
-                <h2>Calendar</h2>
-                <p>This section will display the calendar.</p>
-            </article>
-        </section>
+    <ul class="charts">
+        <div class="chart" id="doughnutChart">
+            <canvas id="myChart5" style="width:100%;max-width:500px"></canvas>
+        </div>
+        <div class="chart" id="barChart">
+            <canvas id="myChart6" style="width:100%;max-width:500px"></canvas>
+        </div>
+    </ul>
 
-        <aside>
-            <h2>Additional Information</h2>
-            <p>This sidebar will display additional information or links.</p>
-        </aside>
-
-        <section id="user-interactions">
-            <h2>User Interactions</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="department">Department:</label>
-                <select id="department" name="department">
-                    <option value="sales">Sales</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="finance">Finance</option>
-                    <option value="hr">Human Resources</option>
-                </select><br><br>
-
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-
-                <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
-            </form>
-        </section>
-    </main>
+    <ul class="charts">
+        <div class="chart" id="barChart">
+            <canvas id="myChart7" style="width:100%;max-width:500px"></canvas>
+        </div>
+        <div class="chart" id="barChart">
+            <canvas id="myChart8" style="width:100%;max-width:500px"></canvas>
+        </div>
+    </ul>
 
     <footer>
+        <!-- Footer content aa-->
         <p>&copy; 2024 Superstore Dashboard By Team 13 - Balikpapan. All rights reserved.</p>
     </footer>
 </body>

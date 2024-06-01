@@ -60,7 +60,7 @@ nav a:hover {
 }
 .mentors-container {
 display: flex;
-justify-content: flex-start; /* Align items to the start */
+justify-content: center; /* Align items to the start */
 flex-wrap: wrap; /* Wrap to the next line if there's not enough space */
 gap: 10px; /* Optional: Add space between items */
 }

@@ -1,7 +1,7 @@
 const loginForm = document.getElementById('login-form');
 const registerForm = document.getElementById('register-form');
 
-if(registerForm) {
+if (registerForm) {
     registerForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -21,6 +21,12 @@ if(registerForm) {
 
         if (!validateEmail(email)) {
             errorMessageElement.innerText = "Invalid email format";
+            errorMessageElement.style.display = 'block';
+            return;
+        }
+
+        if (password.length < 8) {
+            errorMessageElement.innerText = "Password must be at least 8 characters long";
             errorMessageElement.style.display = 'block';
             return;
         }
@@ -47,13 +53,13 @@ if(registerForm) {
     });
 }
 
-if(loginForm) {
+if (loginForm) {
     loginForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
         const email = document.getElementById('login-email').value.trim();
         const password = document.getElementById('login-password').value;
-    
+
         const errorMessageElement = document.getElementById('login-error-message');
         errorMessageElement.style.display = 'none';
 
