@@ -37,7 +37,7 @@ Our project is a collaborative effort by the following team members:
     ```bash
     cd superstore-dashboard
     ```
-3. Open `index.html` in your web browser to view the dashboard, or visit website : https://tugas-milestone-untuk-memenuhi-ceklis.vercel.app/
+3. Open `index.html` in your web browser to view the dashboard, or visit our website team : https://km-feb24-balikpapan-13.vercel.app/
 
 
 ## Contact Information
