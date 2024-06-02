@@ -60,12 +60,11 @@ function searchSuperstore() {
               <p>Order ID: ${item['Order ID']}</p>
               <p>Customer Name: ${item['Customer Name']}</p>
               <p>Product Name: ${item['Product Name']}</p>
-              <!-- Tambahkan field lainnya sesuai kebutuhan -->
             `;
             resultsContainer.appendChild(resultItem);
           });
         } else {
-          resultsContainer.innerHTML = '<p>Tidak ada hasil yang ditemukan.</p>';
+          resultsContainer.innerHTML = '<p>No Results.</p>';
         }
 
         // Tampilkan modal
