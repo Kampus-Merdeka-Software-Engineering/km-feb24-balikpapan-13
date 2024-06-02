@@ -41,7 +41,7 @@ Our project is a collaborative effort by the following team members:
 
 
 ## Contact Information
-For any inquiries or further information, please contact any of the team members.
+For any inquiries or further information, please contact any of the team members through our website.
 
 ---
 
