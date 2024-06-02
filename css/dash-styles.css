@@ -1,11 +1,10 @@
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
-    padding: 0;
-}
+  }
 
 /* Header styles */
 header {
@@ -112,6 +111,10 @@ aside {
     padding: 20px;
     border: 1px solid #ddd;
 }
+main {
+    flex: 1;
+    /* Gaya lain untuk konten utama */
+  }
 
 /* Footer styles */
 footer {
