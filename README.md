@@ -11,16 +11,16 @@ Welcome to the Superstore Dashboard! This project is designed to provide compreh
 ## Team Members
 Our project is a collaborative effort by the following team members:
 
-- **Julia Ressi Irrenova Yulistia**: Name, Role (Team Leader)
-- **Deni Kristanto**: Name, Role (Front-End Developer)
-- **Defrizal Arif Rahma**: Name, Role (Front-End Developer)
-- **Melly Isnulsari**: Name, Role (Deployment)
-- **Akhirul Abqar**: Name, Role (Deployment)
-- **Anggita Dwi Sulistiani**: Name, Role (Pitch Deck)
-- **Sanny Mariani Hisarma**: Name, Role (Pitch Deck)
-- **Paskah Magdalena S.**: Name, Role (Pitch Deck)
-- **Ririn Nur Fatimah**: Name, Role (Quality Assurance)
-- **Alvinida Khafiah**: Name, Role (Quality Assurance)
+- **Julia Ressi Irrenova Yulistia** as Team Leader
+- **Deni Kristanto** as Front-End Developer
+- **Defrizal Arif Rahma** as Front-End Developer
+- **Melly Isnulsari** as Deployment
+- **Akhirul Abqar** as Deployment
+- **Anggita Dwi Sulistiani** as Pitch Deck
+- **Sanny Mariani Hisarma** as Pitch Deck
+- **Paskah Magdalena S.** as Pitch Deck
+- **Ririn Nur Fatimah** as Quality Assurance
+- **Alvinida Khafiah** as Quality Assurance
 
 ## Technologies Used
 - **HTML**: Structure of the dashboard
