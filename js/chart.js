@@ -263,7 +263,7 @@ fetch('superstore.json')
 
     var ctx5 = document.getElementById('myChart5').getContext('2d');
     var myChart5 = new Chart(ctx5, {
-      type: 'pie',
+      type: 'doughnut',
       data: data5,
       options: options5
     });

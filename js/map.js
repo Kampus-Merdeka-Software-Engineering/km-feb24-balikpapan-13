@@ -22,8 +22,8 @@ fetch('superstore.json')
         cityData[city] = {
           sales: item.Sales,
           profit: item.Profit,
-          lat: item.Latitude,
-          lng: item.Longitude
+          //lat: item.Latitude,
+         // lng: item.Longitude
         };
       }
     });
