@@ -31,11 +31,11 @@ Our project is a collaborative effort by the following team members:
 ## Setup Instructions
 1. Clone the repository to your local machine.
     ```bash
-    git clone https://github.com/your-repo/superstore-dashboard.git
+    git clone https://github.com/Kampus-Merdeka-Software-Engineering/km-feb24-balikpapan-13.git
     ```
 2. Navigate to the project directory.
     ```bash
-    cd superstore-dashboard
+    cd km-feb24-balikpapan-13
     ```
 3. Open `index.html` in your web browser to view the dashboard, or visit our website team : https://km-feb24-balikpapan-13.vercel.app/
 
