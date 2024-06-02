@@ -129,10 +129,13 @@ fetch('superstore.json')
   .then(data => {
     var categories = ["Technology", "Office Supplies", "Furniture"];
     var salesData = [];
+    var profitData = [];
 
     categories.forEach(category => {
       var categorySales = data.filter(item => item.Category === category).reduce((sum, item) => sum + item.Sales, 0);
+      var categoryProfit = data.filter(item => item.Category === category).reduce((sum, item) => sum + item.Profit, 0);
       salesData.push(categorySales);
+      profitData.push(categoryProfit);
     });
 
     var data3 = {
@@ -140,8 +143,13 @@ fetch('superstore.json')
       datasets: [{
         label: 'Sales',
         data: salesData,
-        borderColor: ["#5CB3FF", "#79BAEC", "#82CAFF"],
-        backgroundColor: ["#5CB3FF", "#79BAEC", "#82CAFF"]
+        borderColor: "#5CB3FF",
+        backgroundColor: "#5CB3FF"
+      }, {
+        label: 'Profit',
+        data: profitData,
+        borderColor: "#79BAEC",
+        backgroundColor: "#79BAEC"
       }]
     };
 
@@ -154,9 +162,6 @@ fetch('superstore.json')
         y: {
           beginAtZero: true
         }
-      },
-      legend: {
-        display: false
       }
     };
 
@@ -170,6 +175,7 @@ fetch('superstore.json')
   .catch(error => {
     console.error('Error fetching JSON data:', error);
   });
+
 
 // Chart 4
 fetch('superstore.json')
