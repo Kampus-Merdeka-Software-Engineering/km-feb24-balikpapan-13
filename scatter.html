@@ -4,15 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geomaps</title>
+    <title>Scatter Plot</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="stylesheet" href="css/dash-styles.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-   
-  
+    <style>
+        .charts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 50vh; /* Adjust height as needed */
+        }
+        .chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+        }
+        canvas {
+            width: 100%;
+            max-width: 1000px;
+        }
+    </style>
+</head>
+<body>
 </head>
 
 <body>
@@ -42,7 +64,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Show All Chart</a>
-                            <a class="dropdown-item" href="#">Scatter Plot</a>
+                            <a class="dropdown-item" href="geomaps.html">Geomaps</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html">About us</a>
                         </div>
@@ -82,7 +104,12 @@
       </div>
     </div>
   </div>
-  <div id="map"></div>
+
+  <ul class="charts">
+    <div class="chart" id="barChart">
+      <canvas id="myChart7" style="width:100%;max-width:900px"></canvas>
+    </div>
+    </ul>
 
 
          <!-- Footer content aa-->

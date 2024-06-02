@@ -319,3 +319,72 @@ fetch('superstore.json')
   .catch(error => {
     console.error('Error fetching JSON data:', error);
   });
+//scatter plot
+
+ // Membaca data dari file superstore.json
+fetch('superstore.json')
+.then(response => response.json())
+.then(data => {
+  // Memisahkan data berdasarkan kategori
+  var technologyData = data.filter(item => item.Category === 'Technology');
+  var furnitureData = data.filter(item => item.Category === 'Furniture');
+  var officeSuppliesData = data.filter(item => item.Category === 'Office Supplies');
+
+  // Mengambil data Discount dan Profit untuk setiap kategori
+  var technologyPoints = technologyData.map(item => ({ x: item.Discount, y: item.Profit }));
+  var furniturePoints = furnitureData.map(item => ({ x: item.Discount, y: item.Profit }));
+  var officeSuppliesPoints = officeSuppliesData.map(item => ({ x: item.Discount, y: item.Profit }));
+
+  var data = {
+    datasets: [{
+      label: "Technology",
+      borderColor: "#5CB3FF",
+      backgroundColor: "#5CB3FF",
+      data: technologyPoints,
+    }, {
+      label: "Furniture",
+      borderColor: "#79BAEC",
+      backgroundColor: "#79BAEC",
+      data: furniturePoints,
+    }, {
+      label: "Office Supplies",
+      borderColor: "#82CAFF",
+      backgroundColor: "#82CAFF",
+      data: officeSuppliesPoints,
+    }]
+  };
+
+  var options = {
+    responsive: true,
+    title: {
+      display: true,
+      text: 'Relationship Between Discount on Profit By Category'
+    },
+    scales: {
+      x: {
+        type: 'linear',
+        position: 'bottom',
+        title: {
+          display: true,
+          text: 'Discount'
+        }
+      },
+      y: {
+        title: {
+          display: true,
+          text: 'Profit'
+        }
+      }
+    }
+  };
+
+  var ctx7 = document.getElementById('myChart7').getContext('2d');
+  var myChart = new Chart(ctx7, {
+    type: 'scatter',
+    data: data,
+    options: options
+  });
+})
+.catch(error => {
+  console.error('Error fetching JSON data:', error);
+});
