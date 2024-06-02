@@ -132,8 +132,8 @@ fetch('superstore.json')
     var profitData = [];
 
     categories.forEach(category => {
-      var categorySales = data.filter(item => item.Category === category).reduce((sum, item) => sum + item.Sales, 0);
-      var categoryProfit = data.filter(item => item.Category === category).reduce((sum, item) => sum + item.Profit, 0);
+      var categorySales = data.filter(item => item.Category === category).reduce((sum, item) => sum + (item.Sales || 0), 0);
+      var categoryProfit = data.filter(item => item.Category === category).reduce((sum, item) => sum + (item.Profit || 0), 0);
       salesData.push(categorySales);
       profitData.push(categoryProfit);
     });
@@ -175,6 +175,7 @@ fetch('superstore.json')
   .catch(error => {
     console.error('Error fetching JSON data:', error);
   });
+
 
 
 // Chart 4
