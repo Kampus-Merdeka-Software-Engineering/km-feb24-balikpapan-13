@@ -1,43 +1,45 @@
-// Inisialisasi peta
-var map = L.map('map').setView([37.8, -96], 4);
+// Initialize the map
+var map = L.map('map').setView([39.8283, -98.5795], 4);  // Center of the US
 
-// Menambahkan tile layer
+// Add OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-  maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Membaca data dari file superstore.json
+// Function to fetch and plot data
 fetch('superstore.json')
-  .then(response => response.json())
-  .then(data => {
-    // Mengelompokkan data berdasarkan kota
-    var cityData = {};
-    data.forEach(item => {
-      var city = item.City;
-      if (city in cityData) {
-        cityData[city].sales += item.Sales;
-        cityData[city].profit += item.Profit;
-      } else {
-        cityData[city] = {
-          sales: item.Sales,
-          profit: item.Profit,
-          //lat: item.Latitude,
-         // lng: item.Longitude
-        };
-      }
-    });
+    .then(response => response.json())
+    .then(data => {
+        var locations = data.map(item => ({
+            country: item.Country,
+            city: item.City,
+            state: item.State,
+            postalCode: item['Postal Code'],
+            region: item.Region
+        }));
 
-    // Menampilkan marker untuk setiap kota
-    for (var city in cityData) {
-      var marker = L.marker([cityData[city].lat, cityData[city].lng]).addTo(map);
-      marker.bindPopup(`
-        <b>${city}</b><br>
-        Sales: ${cityData[city].sales}<br>
-        Profit: ${cityData[city].profit}
-      `);
-    }
-  })
-  .catch(error => {
-    console.error('Error fetching JSON data:', error);
-  });
+        // Filter locations to be in the United States
+        locations = locations.filter(location => location.country === "United States");
+
+        // Geocode each location and add markers to the map
+        locations.forEach(location => {
+            var address = `${location.city}, ${location.state}, ${location.country}`;
+
+            fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        var latlng = [data[0].lat, data[0].lon];
+                        L.marker(latlng)
+                            .addTo(map)
+                            .bindPopup(`<b>${location.city}, ${location.state}</b><br>${location.region}`);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching geocode data:', error);
+                });
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching JSON data:', error);
+    });
