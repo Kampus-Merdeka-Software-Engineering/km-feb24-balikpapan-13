@@ -33,6 +33,10 @@ nav a:hover {
     padding: 20px;
     text-align: center;
     background-color: #ecf0f1;
+    background-image: url('/img/bagroundded.jpg'); /* Add your image path here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .team-container {
     display: flex;
