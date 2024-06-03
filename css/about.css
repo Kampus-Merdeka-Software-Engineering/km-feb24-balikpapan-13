@@ -2,8 +2,8 @@ body {
     font-family: 'Tahoma', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #ffffff;
+    color: #f8f8f8;
 }
 header {
     background-image: url('../img/BG5.jpg');
@@ -33,6 +33,10 @@ nav a:hover {
     padding: 20px;
     text-align: center;
     background-color: #ecf0f1;
+    background-image: url('/img/baground\ web\ 2.jpg'); /* Add your image path here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .team-container {
     display: flex;
@@ -104,7 +108,7 @@ gap: 10px; /* Optional: Add space between items */
 .mentors-member h3 {
     font-size: 1.2em;
     margin: 10px 0 5px;
-    color: #395b7c;
+    color: #ffffff;
 }
 .team-member p {
     margin: 5px 0;
@@ -112,7 +116,7 @@ gap: 10px; /* Optional: Add space between items */
 }
 .mentors-member p {
     margin: 5px 0;
-    color: #7f8c8d;
+    color: #000000;
 }
 .team-member .social-icons {
     margin-top: 10px;
@@ -127,7 +131,7 @@ gap: 10px; /* Optional: Add space between items */
     font-size: 1.5em;
 }
 .mentors-member .social-icons a {
-    color: #0e76a8; /* LinkedIn color */
+    color: #45606b; /* LinkedIn color */
     margin: 0 5px;
     text-decoration: none;
     font-size: 1.5em;
