@@ -8,6 +8,11 @@ Welcome to the Superstore Dashboard! This project is designed to provide compreh
 - **Responsive Design**: Ensures the dashboard looks good on all devices.
 - **Search**: To find the data of customer name and product name in superstore.json.
 
+## <summary><strong>Tools:</strong></summary>
+<p>
+    <img src="https://img.shields.io/badge/Text%20Editor-Visual%20Studio%20Code-blue?&logo=visual%20studio%20code&logoColor=blue" />
+</p>
+
 ## Team Members
 Our project is a collaborative effort by the following team members:
 
