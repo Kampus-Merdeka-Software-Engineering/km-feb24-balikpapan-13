@@ -1,0 +1,21 @@
+
+        .charts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 50vh; /* Adjust height as needed */
+        }
+        .chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+        }
+        canvas {
+            width: 100%;
+            max-width: 1000px;
+        }

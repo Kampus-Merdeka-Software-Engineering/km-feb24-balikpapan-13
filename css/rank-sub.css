@@ -1,0 +1,17 @@
+.rank-table {
+    background-color: #ffffff; /* Background putih untuk tabel */
+}
+.rank-table thead {
+    background-color: #f8f9fa; /* Background cerah untuk header */
+}
+.rank-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Background cerah untuk baris genap */
+}
+.total-row {
+    font-weight: bold;
+    background-color: #f9f9f9; /* Background untuk total row */
+}
+.card-custom {
+    margin-bottom: 20px;
+    color: #000000; /* Warna font hitam untuk card */
+}

@@ -4,20 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superstore Geomaps</title>
+    <title>Rank of sub category</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="stylesheet" href="css/dash-styles.css">
+    <link rel="stylesheet" href="css/rank-sub.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        #map {
-            height: 500px;
-            width: 100%;
-        }
-    </style>
-  
-</head>
 
 <body>
     <header>
@@ -26,7 +19,7 @@
             <nav class="navbar navbar-light bg-light">
                 <a class="navbar-brand" href="#">
                     <img src="/img/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-                    Superstore Geomaps
+                    Rank Of Sub Category
                 </a>
             </nav>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -47,7 +40,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="scatter.html">Scatter Plot</a>
                             <a class="dropdown-item" href="datatable.html">Data Tables</a>
-                            <a class="dropdown-item" href="rank-sub.html">Rank Sub Category</a>
+                            <a class="dropdown-item" href="geomaps.html">Geomaps</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="index.html">About us</a>
                         </div>
@@ -87,8 +80,96 @@
       </div>
     </div>
   </div>
-  <!--Geomaps-->
-  <div id="map"></div>
+  <!--Rank Of Sub Category-->
+  <div class="container mt-5">
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title">Total Sales</h5>
+                    <p class="card-text" id="totalSalesCard">0.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title">Total Quantity</h5>
+                    <p class="card-text" id="totalQuantityCard">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title">Total Discount</h5>
+                    <p class="card-text" id="totalDiscountCard">0.00</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title">Total Categories</h5>
+                    <p class="card-text" id="totalCategoriesCard">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title">Total Sub-Categories</h5>
+                    <p class="card-text" id="totalSubCategoriesCard">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title">Total Order IDs</h5>
+                    <p class="card-text" id="totalOrderIDsCard">0</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-custom">
+                <div class="card-body">
+                    <h5 class="card-title">Total Product IDs</h5>
+                    <p class="card-text" id="totalProductIDsCard">0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table id="dataTable" class="table table-bordered table-hover rank-table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Category</th>
+                    <th>Sub-Category</th>
+                    <th>Order ID</th>
+                    <th>Product ID</th>
+                    <th>Sales</th>
+                    <th>Quantity</th>
+                    <th>Discount</th>
+                </tr>
+            </thead>
+            <tbody id="rankTableBody">
+                <!-- Data ranking akan ditampilkan di sini -->
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="4">Total</td>
+                    <td id="totalSales">0.00</td>
+                    <td id="totalQuantity">0</td>
+                    <td id="totalDiscount">0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
 
 
          <!-- Footer content aa-->
@@ -116,7 +197,7 @@
           
         <script src="js/chart.js" defer></script>
         <script src="js/seacrh.js" defer></script>
-        <script src="js/map.js" defer></script>
+        <script src="js/rank-sub.js" defer></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
