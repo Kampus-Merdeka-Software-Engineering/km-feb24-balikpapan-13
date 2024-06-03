@@ -1,126 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superstore Dashboard</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- Add any CSS links or stylesheets here -->
+
     <link rel="stylesheet" href="css/dash-styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script src="js/chart.js" defer></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
-        <h1>Welcome to Superstore Dashboard</h1>
         <!-- Navigation -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="dash.html">Analytics</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+                    Superstore Dashboard
+                </a>
+            </nav>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="dash.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Analytics
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="geomaps.html">Geomaps</a>
+                            <a class="dropdown-item" href="scatter.html">Scatter Plot</a>
+                            <a class="dropdown-item" href="datatable.html">Data Tables</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html">About us</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Logout</a>
+                    </li>
+
+                </ul>
+                <!-- <form class="form-inline my-2 my-lg-0" onsubmit="return false;"> -->
+                    <!-- </form> -->
+                    <input class="form-control mr-sm-2" style="width: 20%;" type="search" id="searchInput" placeholder="Search Customer Name" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="searchButton">Search</button>
+                    <!-- <div id="searchResults"></div> 
+                <input type="text" class="form-control" id="searchInput" placeholder="Cari...">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="searchButton">Cari</button>
+                </div> -->
         </nav>
-    </header>
 
-    <!-- cards -->
-    <div class="cardBox">
-        <div class="card">
-            <div>
-                <div class="numbers">$286,40 rb</div>
-                <div class="cardName">Total Profit</div>
-            </div>
-            <div class="iconbox">
-                <ion-icon name="cart-outline"></ion-icon>
-            </div>
+        <!-- Modal -->
+  <div class="modal fade text-dark" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="searchModalLabel">Search Results</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div class="card">
-            <div>
-                <div class="numbers">$2,30 jt</div>
-                <div class="cardName">Total Sales</div>
-            </div>
-            <div class="iconbox">
-                <ion-icon name="cart-outline"></ion-icon>
-            </div>
+        <div class="modal-body text-dark" id="searchResults">
+          <!-- Hasil pencarian akan ditampilkan di sini -->
         </div>
-        <div class="card">
-            <div>
-                <div class="numbers">5 rb</div>
-                <div class="cardName">Total Order</div>
-            </div>
-            <div class="iconbox">
-                <ion-icon name="cart-outline"></ion-icon>
-            </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
-        <div class="card">
-            <div>
-                <div class="numbers">37.9 rb</div>
-                <div class="cardName">Unit terjual</div>
-            </div>
-            <div class="iconbox">
-                <ion-icon name="cart-outline"></ion-icon>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <div class="numbers">793</div>
-                <div class="cardName">Jumlah Customer</div>
-            </div>
-            <div class="iconbox">
-                <ion-icon name="cart-outline"></ion-icon>
-            </div>
-        </div>
-        <div class="card">
-            <div>
-                <div class="numbers">16%</div>
-                <div class="cardName">Total Diskon</div>
-            </div>
-            <div class="iconbox">
-                <ion-icon name="cart-outline"></ion-icon>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
+  
+        <!-- cards -->
+        <div class="cardBox">
+            <div class="card">
+                <div>
+                    <div class="numbers" id="totalProfit"></div>
+                    <div class="cardName">Total Profit</div>
+                </div>
+                <div class="iconbox">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers" id="totalSales"></div>
+                    <div class="cardName">Total Sales</div>
+                </div>
+                <div class="iconbox">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers" id="totalOrders"></div>
+                    <div class="cardName">Total Order</div>
+                </div>
+                <div class="iconbox">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers" id="unitsSold"></div>
+                    <div class="cardName">Unit terjual</div>
+                </div>
+                <div class="iconbox">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers" id="totalCustomers"></div>
+                    <div class="cardName">Jumlah Customer</div>
+                </div>
+                <div class="iconbox">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers" id="totalDiscount"></div>
+                    <div class="cardName">Total Diskon</div>
+                </div>
+                <div class="iconbox">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
 
-    <!-- Dashboard -->
-    <ul class="charts">
-        <div class="chart" id="linechart">
-            <canvas id="myChart1" style="width:100%;max-width:500px"></canvas>
-        </div>
-        <div class="chart" id="barChart">
-            <canvas id="myChart2" style="width:100%;max-width:500px"></canvas>
-        </div>
-    </ul>
+        <!-- Dashboardd -->
+        <ul class="charts">
+            <div class="chart" id="linechart">
+                <canvas id="myChart1" style="width:400%;"></canvas>
+            </div>
+            <div class="chart" id="barChart1">
+                <canvas id="myChart2" style="width:400%;"></canvas>
+            </div>
+        </ul>
 
-    <ul class="charts">
-        <div class="chart" id="barChart">
-            <canvas id="myChart3" style="width:100%;max-width:500px"></canvas>
-        </div>
-        <div class="chart" id="pieChart">
-            <canvas id="myChart4" style="width:100%;max-width:500px"></canvas>
-        </div>
-    </ul>
+        <ul class="charts">
+            <div class="chart" id="barChart2">
+                <canvas id="myChart3" style="width:400%;"></canvas>
+            </div>
+            <div class="chart" id="pieChart">
+                <canvas id="myChart4" style="width:400%;"></canvas>
+            </div>
+        </ul>
 
-    <ul class="charts">
-        <div class="chart" id="doughnutChart">
-            <canvas id="myChart5" style="width:100%;max-width:500px"></canvas>
-        </div>
-        <div class="chart" id="barChart">
-            <canvas id="myChart6" style="width:100%;max-width:500px"></canvas>
-        </div>
-    </ul>
+        <ul class="charts">
+            <div class="chart" id="doughnutChart">
+                <canvas id="myChart5" style="width:400%;"></canvas>
+            </div>
+            <div class="chart" id="barChart3">
+                <canvas id="myChart6" style="width:400%;"></canvas>
+            </div>
+        </ul>
 
-    <ul class="charts">
-        <div class="chart" id="barChart">
-            <canvas id="myChart7" style="width:100%;max-width:500px"></canvas>
-        </div>
-        <div class="chart" id="barChart">
-            <canvas id="myChart8" style="width:100%;max-width:500px"></canvas>
-        </div>
-    </ul>
-
-    <footer>
-        <!-- Footer content aa-->
-        <p>&copy; 2024 Superstore Dashboard By Team 13 - Balikpapan. All rights reserved.</p>
-    </footer>
+                    <!-- Footer content aa-->
+                    <footer>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <h4>Superstore Dashboard</h4>
+                              <p>CAPSTONE PROJECT DATA ANALYTICS & SOFWARE ENGINEERING<br>REVOU X KAMPUS MERDEKA BATCH 6</p>
+                            </div>
+                            <div class="col-md-6 text-right">
+                              <ul class="social-icons">
+                                <li><a href="https://github.com/Kampus-Merdeka-Software-Engineering/km-feb24-balikpapan-13.git"><i class="fab fa-github"></i></a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <div class="col-md-12 text-center">
+                              <p>&copy; 2024 Superstore Dashboard By Team 13 - Balikpapan. All rights reserved.</p>
+                            </div>
+                          </div>
+                        </div>
+                    </footer>
+                <script src="js/chart.js" defer></script>
+                <script src="js/seacrh.js" defer></script>
+                <script src="js/card.js" defer></script>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scatter Plot</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/dash-styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .charts {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            height: 50vh; /* Adjust height as needed */
+        }
+        .chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+        }
+        canvas {
+            width: 100%;
+            max-width: 1000px;
+        }
+    </style>
+</head>
+<body>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+                    Scatter Plot
+                </a>
+            </nav>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="dash.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Analytics
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Show All Chart</a>
+                            <a class="dropdown-item" href="geomaps.html">Geomaps</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.html">About us</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Logout</a>
+                    </li>
+                    
+                </ul>
+                <!-- <form class="form-inline my-2 my-lg-0" onsubmit="return false;"> -->
+                    <!-- </form> -->
+                    <input class="form-control mr-sm-2" style="width: 20%;" type="search" id="searchInput" placeholder="Search Customer Name" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="searchButton">Search</button>
+                    <!-- <div id="searchResults"></div> 
+                <input type="text" class="form-control" id="searchInput" placeholder="Cari...">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="searchButton">Cari</button>
+                </div> -->
+        </nav>
+
+        <!-- Modal -->
+  <div class="modal fade text-dark" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="searchModalLabel">Search Results</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-dark" id="searchResults">
+          <!-- Hasil pencarian akan ditampilkan di sini -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="charts">
+    <div class="chart" id="barChart">
+      <canvas id="myChart7" style="width:100%;max-width:900px"></canvas>
+    </div>
+    </ul>
+
+
+         <!-- Footer content aa-->
+         <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <h4>Superstore Dashboard</h4>
+                  <p>CAPSTONE PROJECT DATA ANALYTICS & SOFWARE ENGINEERING<br>REVOU X KAMPUS MERDEKA BATCH 6</p>
+                </div>
+                <div class="col-md-6 text-right">
+                  <ul class="social-icons">
+                    <li><a href="https://github.com/Kampus-Merdeka-Software-Engineering/km-feb24-balikpapan-13.git"><i class="fab fa-github"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <p>&copy; 2024 Superstore Dashboard By Team 13 - Balikpapan. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+          
+        <script src="js/chart.js" defer></script>
+        <script src="js/seacrh.js" defer></script>
+        <script src="js/map.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</body>
+
+</html>

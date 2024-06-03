@@ -5,22 +5,27 @@ Welcome to the Superstore Dashboard! This project is designed to provide compreh
 
 ## Features
 - **Interactive Charts**: Various types of charts (pie, bar, doughnut) to visualize data effectively.
-- **User Interactions**: Forms for user input and feedback.
 - **Responsive Design**: Ensures the dashboard looks good on all devices.
+- **Search**: To find the data of customer name and product name in superstore.json.
+
+## <summary><strong>Tools:</strong></summary>
+<p>
+    <img src="https://img.shields.io/badge/Text%20Editor-Visual%20Studio%20Code-blue?&logo=visual%20studio%20code&logoColor=blue" />
+</p>
 
 ## Team Members
 Our project is a collaborative effort by the following team members:
 
-- **Julia Ressi Irrenova Yulistia**: Name, Role (Team Leader)
-- **Deni Kristanto**: Name, Role (Front-End Developer)
-- **Defrizal Arif Rahma**: Name, Role (Front-End Developer)
-- **Melly Isnulsari**: Name, Role (Deployment)
-- **Akhirul Abqar**: Name, Role (Deployment)
-- **Anggita Dwi Sulistiani**: Name, Role (Pitch Deck)
-- **Sanny Mariani Hisarma**: Name, Role (Pitch Deck)
-- **Paskah Magdalena S.**: Name, Role (Pitch Deck)
-- **Ririn Nur Fatimah**: Name, Role (Quality Assurance)
-- **Alvinida Khafiah**: Name, Role (Quality Assurance)
+- **Julia Ressi Irrenova Yulistia** as Team Leader
+- **Deni Kristanto** as Front-End Developer
+- **Defrizal Arif Rahma** as Front-End Developer
+- **Melly Isnulsari** as Deployment
+- **Akhirul Abqar** as Deployment
+- **Anggita Dwi Sulistiani** as Pitch Deck
+- **Sanny Mariani Hisarma** as Pitch Deck
+- **Paskah Magdalena S.** as Pitch Deck
+- **Ririn Nur Fatimah** as Quality Assurance
+- **Alvinida Khafiah** as Quality Assurance
 
 ## Technologies Used
 - **HTML**: Structure of the dashboard
@@ -31,17 +36,17 @@ Our project is a collaborative effort by the following team members:
 ## Setup Instructions
 1. Clone the repository to your local machine.
     ```bash
-    git clone https://github.com/your-repo/superstore-dashboard.git
+    git clone https://github.com/Kampus-Merdeka-Software-Engineering/km-feb24-balikpapan-13.git
     ```
 2. Navigate to the project directory.
     ```bash
-    cd superstore-dashboard
+    cd km-feb24-balikpapan-13
     ```
-3. Open `index.html` in your web browser to view the dashboard, or visit website : https://tugas-milestone-untuk-memenuhi-ceklis.vercel.app/
+3. Open `index.html` in your web browser to view the dashboard, or visit our website team : https://km-feb24-balikpapan-13.vercel.app/
 
 
 ## Contact Information
-For any inquiries or further information, please contact any of the team members.
+For any inquiries or further information, please contact any of the team members through our website.
 
 ---
 
