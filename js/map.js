@@ -1,45 +1,65 @@
-// Initialize the map
-var map = L.map('map').setView([39.8283, -98.5795], 4);  // Center of the US
+// Inisialisasi peta Leaflet
+var map = L.map('map').setView([37.8, -96], 4);
 
-// Add OpenStreetMap tiles
+// Menambahkan tiles layer ke peta
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+    maxZoom: 18,
 }).addTo(map);
 
-// Function to fetch and plot data
+// Memuat data dari file superstore.json
 fetch('superstore.json')
     .then(response => response.json())
     .then(data => {
-        var locations = data.map(item => ({
-            country: item.Country,
-            city: item.City,
-            state: item.State,
-            postalCode: item['Postal Code'],
-            region: item.Region
-        }));
+        // Mengelompokkan data penjualan berdasarkan negara
+        const salesByCountry = data.reduce((acc, order) => {
+            const country = order['Country'];
+            if (!acc[country]) {
+                acc[country] = 0;
+            }
+            acc[country] += order['Sales'];
+            return acc;
+        }, {});
 
-        // Filter locations to be in the United States
-        locations = locations.filter(location => location.country === "United States");
+        // Membuat marker untuk setiap negara dengan data penjualan
+        for (const country in salesByCountry) {
+            // Mendapatkan koordinat latitude dan longitude untuk negara (Anda dapat menggunakan layanan geocoding)
+            const lat = getLatitude(country);
+            const lng = getLongitude(country);
 
-        // Geocode each location and add markers to the map
-        locations.forEach(location => {
-            var address = `${location.city}, ${location.state}, ${location.country}`;
-
-            fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.length > 0) {
-                        var latlng = [data[0].lat, data[0].lon];
-                        L.marker(latlng)
-                            .addTo(map)
-                            .bindPopup(`<b>${location.city}, ${location.state}</b><br>${location.region}`);
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching geocode data:', error);
-                });
-        });
+            // Membuat marker dengan popup yang menampilkan total penjualan untuk negara tersebut
+            L.marker([lat, lng]).addTo(map)
+                .bindPopup(`<b>${country}</b><br>Total Sales: $${salesByCountry[country].toFixed(2)}`);
+        }
     })
     .catch(error => {
-        console.error('Error fetching JSON data:', error);
+        console.error('Error:', error);
     });
+
+// Fungsi untuk mendapatkan latitude berdasarkan nama negara (implementasi contoh)
+function getLatitude(country) {
+    // Implementasikan logika untuk mendapatkan latitude berdasarkan nama negara
+    // Misalnya, menggunakan layanan geocoding atau data koordinat yang telah didefinisikan sebelumnya
+    // Contoh sederhana:
+    if (country === 'United States') {
+        return 37.0902;
+    }
+
+    if (country === 'United States') {
+        return 37.0902;
+    }
+    // Tambahkan kondisi untuk negara lainnya
+    return 0;
+}
+
+// Fungsi untuk mendapatkan longitude berdasarkan nama negara (implementasi contoh)
+function getLongitude(country) {
+    // Implementasikan logika untuk mendapatkan longitude berdasarkan nama negara
+    // Misalnya, menggunakan layanan geocoding atau data koordinat yang telah didefinisikan sebelumnya
+    // Contoh sederhana:
+    if (country === 'United States') {
+        return -95.7129;
+    }
+    // Tambahkan kondisi untuk negara lainnya
+    return 0;
+}
