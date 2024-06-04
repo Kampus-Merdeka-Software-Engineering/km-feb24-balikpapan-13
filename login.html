@@ -11,13 +11,17 @@
     <div class="login-container">
         <div class="logo">
             <img src="img/shopping_cart.png" alt="Superstore Logo">
-            <h1>Superstore</h1>
+            <h1>Superstore Login</h1>
         </div>
         <form class="login-form" id="login-form" action="">
             <input type="email" id="login-email" name="email" placeholder="Enter Email" required>
             <input type="password" id="login-password" name="password" placeholder="Enter Password" required>
+            <label class="show-password-label">
+                <input type="checkbox" id="show-password"> Show Password
+            </label>
             <button type="submit">Login</button>
         </form>
+        <div id="login-error-message" style="color: red; display: none;">Error message</div>
         <div class="register-link">
             <p>Don't have an account? <a href="register.html">Register here</a></p>
         </div>
@@ -25,3 +29,6 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
     <script src="js/script.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

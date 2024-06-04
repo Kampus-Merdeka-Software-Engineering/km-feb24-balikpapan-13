@@ -1,11 +1,29 @@
 const loginForm = document.getElementById('login-form');
 const registerForm = document.getElementById('register-form');
 
+document.getElementById('show-password').addEventListener('change', function() {
+    const passwordField = document.getElementById('register-password');
+    const confirmPasswordField = document.getElementById('confirm-password');
+    const type = this.checked ? 'text' : 'password';
+    passwordField.type = type;
+    confirmPasswordField.type = type;
+});
+$(document).ready(function() {
+    $('#show-password').change(function() {
+        var passwordInput = $('#login-password');
+        if ($(this).is(':checked')) {
+            passwordInput.attr('type', 'text');
+        } else {
+            passwordInput.attr('type', 'password');
+        }
+    });
+});
+
+
 if (registerForm) {
     registerForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const username = document.getElementById('register-username').value.trim();
         const email = document.getElementById('register-email').value.trim();
         const password = document.getElementById('register-password').value;
         const confirmPassword = document.getElementById('confirm-password').value;
@@ -13,43 +31,63 @@ if (registerForm) {
         const errorMessageElement = document.getElementById('register-error-message');
         errorMessageElement.style.display = 'none';
 
-        if (!username || !email || !password || !confirmPassword) {
-            errorMessageElement.innerText = "All fields are required";
-            errorMessageElement.style.display = 'block';
+        if (!email || !password || !confirmPassword) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'All fields are required'
+            });
             return;
         }
 
         if (!validateEmail(email)) {
-            errorMessageElement.innerText = "Invalid email format";
-            errorMessageElement.style.display = 'block';
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Invalid email format'
+            });
             return;
         }
 
         if (password.length < 8) {
-            errorMessageElement.innerText = "Password must be at least 8 characters long";
-            errorMessageElement.style.display = 'block';
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Password must be at least 8 characters long'
+            });
             return;
         }
 
         if (password !== confirmPassword) {
-            errorMessageElement.innerText = "Passwords do not match";
-            errorMessageElement.style.display = 'block';
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Passwords do not match'
+            });
             return;
         }
 
         let users = JSON.parse(localStorage.getItem('users')) || [];
 
         if (users.find(user => user.email === email)) {
-            errorMessageElement.innerText = "Email is already registered";
-            errorMessageElement.style.display = 'block';
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Email is already registered'
+            });
             return;
         }
 
-        users.push({ username, email, password: hashPassword(password) });
+        users.push({ email, password: hashPassword(password) });
         localStorage.setItem('users', JSON.stringify(users));
 
-        alert("Registration successful!");
-        window.location.href = "login.html";
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Registration successful!'
+        }).then(() => {
+            window.location.href = "login.html";
+        });
     });
 }
 
@@ -64,8 +102,11 @@ if (loginForm) {
         errorMessageElement.style.display = 'none';
 
         if (!email || !password) {
-            errorMessageElement.innerText = "All fields are required";
-            errorMessageElement.style.display = 'block';
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'All fields are required'
+            });
             return;
         }
 
@@ -74,11 +115,19 @@ if (loginForm) {
         const user = users.find(user => user.email === email && user.password === hashPassword(password));
 
         if (user) {
-            alert("Login successful!");
-            window.location.href = "dash.html";
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: 'Login successful!'
+            }).then(() => {
+                window.location.href = "dash.html";
+            });
         } else {
-            errorMessageElement.innerText = "Invalid email or password";
-            errorMessageElement.style.display = 'block';
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Invalid email or password'
+            });
         }
     });
 }

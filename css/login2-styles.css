@@ -5,10 +5,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to bottom, #0099ff, #66ccff);
+    background: linear-gradient(to bottom, #ff6600, #66ccff);
     font-family: Arial, sans-serif;
 }
+.register-container label {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
 
+.register-container label input[type="checkbox"] {
+    margin-right: 5px;
+}
 .login-container,
 .register-container {
     background-color: white;

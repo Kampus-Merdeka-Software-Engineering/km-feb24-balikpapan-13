@@ -14,10 +14,12 @@
             <h1>Superstore</h1>
         </div>
         <form class="register-form" id="register-form" action="">
-            <input type="text" id="register-username" name="username" placeholder="Enter Username" required>
             <input type="email" id="register-email" name="email" placeholder="Enter Email" required>
             <input type="password" id="register-password" name="password" placeholder="Enter Password" required>
             <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirm Password" required>
+            <label>
+                <input type="checkbox" id="show-password"> Show Password
+            </label>
             <button type="submit">Register</button>
         </form>
         <div class="login-link">
@@ -26,5 +28,6 @@
         <div id="register-error-message" style="color: red; display: none;">Error message</div>
     </div>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
