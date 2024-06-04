@@ -8,16 +8,6 @@ document.getElementById('show-password').addEventListener('change', function() {
     passwordField.type = type;
     confirmPasswordField.type = type;
 });
-$(document).ready(function() {
-    $('#show-password').change(function() {
-        var passwordInput = $('#login-password');
-        if ($(this).is(':checked')) {
-            passwordInput.attr('type', 'text');
-        } else {
-            passwordInput.attr('type', 'password');
-        }
-    });
-});
 
 
 if (registerForm) {
