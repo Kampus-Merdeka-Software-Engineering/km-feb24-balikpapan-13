@@ -120,6 +120,8 @@ fetch('superstore.json')
     console.error('Error fetching JSON data:', error);
   });
 
+
+
 // Chart 3
 fetch('superstore.json')
   .then(response => response.json())
