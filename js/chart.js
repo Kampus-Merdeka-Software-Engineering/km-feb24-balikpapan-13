@@ -97,11 +97,16 @@ fetch('superstore.json')
         display: true,
         text: 'Top Sales by Region/Category'
       },
-      scale: {
-        ticks: {
-          beginAtZero: true
-        },
-        reverse: false
+      scales: {
+        xAxes: [{
+          stacked: true
+        }],
+        yAxes: [{
+          stacked: true,
+          ticks: {
+            beginAtZero: true
+          }
+        }]
       },
       animation: {
         animateRotate: false,
@@ -111,7 +116,7 @@ fetch('superstore.json')
 
     var ctx2 = document.getElementById('myChart2').getContext('2d');
     var myChart2 = new Chart(ctx2, {
-      type: 'polarArea',
+      type: 'bar',
       data: data2,
       options: options2
     });
@@ -119,6 +124,9 @@ fetch('superstore.json')
   .catch(error => {
     console.error('Error fetching JSON data:', error);
   });
+
+
+
 
 
 
