@@ -18,12 +18,12 @@ fetch('superstore.json')
       labels: years.map(String),
       datasets: [{
         label: "profit",
-        borderColor: "#82CAFF",
+        borderColor: "#6B8A7A",
         data: profitData,
         fill: false
       }, {
         label: "sales",
-        borderColor: "#79BAEC",
+        borderColor: "#254336",
         data: salesData,
         fill: false
       }]
@@ -78,15 +78,15 @@ fetch('superstore.json')
       labels: regions,
       datasets: [{
         label: "Technology",
-        backgroundColor: "#5CB3FF",
+        backgroundColor: "#E4C59E",
         data: technologyData
       }, {
         label: "Furniture",
-        backgroundColor: "#79BAEC",
+        backgroundColor: "#AF8260",
         data: furnitureData
       }, {
         label: "Office Supplies",
-        backgroundColor: "#82CAFF",
+        backgroundColor: "#803D3B",
         data: officeSuppliesData
       }]
     };
@@ -196,15 +196,15 @@ fetch('superstore.json')
       datasets: [{
         label: 'Discount',
         data: discountData,
-        borderColor: ["#5CB3FF", "#79BAEC", "#82CAFF"],
-        backgroundColor: ["#5CB3FF", "#79BAEC", "#82CAFF"]
+        borderColor: ["#824D74", "#BE7B72", "#FDAF7B"],
+        backgroundColor: ["#824D74", "#BE7B72", "#FDAF7B"]
       }]
     };
 
     var options4 = {
       title: {
         display: true,
-        text: "Discount Rate/Category %"
+        text: "Discount Rate/Category (%)"
       },
       scales: {
         y: {
@@ -247,8 +247,8 @@ fetch('superstore.json')
       datasets: [{
         label: 'Profit',
         data: profitPercentages,
-        borderColor: ["#5CB3FF", "#79BAEC", "#82CAFF", "#38ACEC"],
-        backgroundColor: ["#5CB3FF", "#79BAEC", "#82CAFF", "#38ACEC"]
+        borderColor: ["#B0C5A4", "#D37676", "#EBC49F", "#F1EF99"],
+        backgroundColor: ["#B0C5A4", "#D37676", "#EBC49F", "#F1EF99"]
       }]
     };
 
@@ -295,8 +295,8 @@ fetch('superstore.json')
       datasets: [{
         label: 'Sales',
         data: salesData,
-        borderColor: ["#5CB3FF", "#79BAEC", "#82CAFF"],
-        backgroundColor: ["#5CB3FF", "#79BAEC", "#82CAFF"]
+        borderColor: ["#9B4444", "#C68484", "#A3C9AA"],
+        backgroundColor: ["#9B4444", "#C68484", "#A3C9AA"]
       }]
     };
 
@@ -344,18 +344,18 @@ fetch('superstore.json')
   var data = {
     datasets: [{
       label: "Technology",
-      borderColor: "#5CB3FF",
-      backgroundColor: "#5CB3FF",
+      borderColor: "#43766C",
+      backgroundColor: "#43766C",
       data: technologyPoints,
     }, {
       label: "Furniture",
-      borderColor: "#79BAEC",
-      backgroundColor: "#79BAEC",
+      borderColor: "#B19470",
+      backgroundColor: "#B19470",
       data: furniturePoints,
     }, {
       label: "Office Supplies",
-      borderColor: "#82CAFF",
-      backgroundColor: "#82CAFF",
+      borderColor: "#76453B",
+      backgroundColor: "#76453B",
       data: officeSuppliesPoints,
     }]
   };
