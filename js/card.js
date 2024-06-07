@@ -3,11 +3,11 @@ fetch('superstore.json')
 .then(data => {
     // Menghitung total profit
     const totalProfit = data.reduce((sum, order) => sum + order['Profit'], 0);
-    document.getElementById('totalProfit').textContent = `$${totalProfit.toFixed(2)} rb`;
+    document.getElementById('totalProfit').textContent = `$${totalProfit.toFixed(2)} `;
 
     // Menghitung total sales
     const totalSales = data.reduce((sum, order) => sum + order['Sales'], 0);
-    document.getElementById('totalSales').textContent = `$${totalSales.toFixed(2)} jt`;
+    document.getElementById('totalSales').textContent = `$${totalSales.toFixed(2)} `;
 
     // Menghitung total order
     const totalOrders = data.length;

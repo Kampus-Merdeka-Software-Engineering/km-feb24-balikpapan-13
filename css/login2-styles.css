@@ -8,16 +8,7 @@ body {
     background: linear-gradient(to bottom, #ff6600, #66ccff);
     font-family: Arial, sans-serif;
 }
-.register-container label {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    font-size: 14px;
-}
 
-.register-container label input[type="checkbox"] {
-    margin-right: 5px;
-}
 .login-container,
 .register-container {
     background-color: white;
