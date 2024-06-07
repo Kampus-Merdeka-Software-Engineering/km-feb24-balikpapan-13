@@ -255,7 +255,7 @@ fetch('superstore.json')
     var options5 = {
       title: {
         display: true,
-        text: "Profit by Region %"
+        text: "Profit by Region (%)"
       },
       scales: {
         y: {
