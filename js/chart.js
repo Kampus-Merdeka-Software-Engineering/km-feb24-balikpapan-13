@@ -59,13 +59,13 @@ fetch('superstore.json')
 fetch('superstore.json')
   .then(response => response.json())
   .then(data => {
-    var regions = ["200", "400", "600", "800"];
+    var regions = ["West", "South", "East", "Central"];
     var technologyData = [];
     var furnitureData = [];
     var officeSuppliesData = [];
 
     regions.forEach(region => {
-      var filteredData = data.filter(item => item["Postal Code"] >= parseInt(region) && item["Postal Code"] < parseInt(region) + 200);
+      var filteredData = data.filter(item => item.Region === region);
       var technologySales = filteredData.filter(item => item.Category === "Technology").reduce((sum, item) => sum + item.Sales, 0);
       var furnitureSales = filteredData.filter(item => item.Category === "Furniture").reduce((sum, item) => sum + item.Sales, 0);
       var officeSuppliesSales = filteredData.filter(item => item.Category === "Office Supplies").reduce((sum, item) => sum + item.Sales, 0);
@@ -78,22 +78,16 @@ fetch('superstore.json')
       labels: regions,
       datasets: [{
         label: "Technology",
-        borderColor: "#5CB3FF",
         backgroundColor: "#5CB3FF",
-        data: technologyData,
-        fill: false
+        data: technologyData
       }, {
         label: "Furniture",
-        borderColor: "#79BAEC",
         backgroundColor: "#79BAEC",
-        data: furnitureData,
-        fill: false
+        data: furnitureData
       }, {
         label: "Office Supplies",
-        borderColor: "#82CAFF",
         backgroundColor: "#82CAFF",
-        data: officeSuppliesData,
-        fill: false
+        data: officeSuppliesData
       }]
     };
 
@@ -103,18 +97,21 @@ fetch('superstore.json')
         display: true,
         text: 'Top Sales by Region/Category'
       },
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
+      scale: {
+        ticks: {
+          beginAtZero: true
+        },
+        reverse: false
+      },
+      animation: {
+        animateRotate: false,
+        animateScale: true
       }
     };
 
     var ctx2 = document.getElementById('myChart2').getContext('2d');
     var myChart2 = new Chart(ctx2, {
-      type: 'bar',
+      type: 'polarArea',
       data: data2,
       options: options2
     });
@@ -122,6 +119,8 @@ fetch('superstore.json')
   .catch(error => {
     console.error('Error fetching JSON data:', error);
   });
+
+
 
 // Chart 3
 fetch('superstore.json')

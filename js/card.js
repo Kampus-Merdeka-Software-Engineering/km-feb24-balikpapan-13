@@ -11,11 +11,11 @@ fetch('superstore.json')
 
     // Menghitung total order
     const totalOrders = data.length;
-    document.getElementById('totalOrders').textContent = `${totalOrders} rb`;
+    document.getElementById('totalOrders').textContent = `${totalOrders} `;
 
     // Menghitung unit terjual
     const unitsSold = data.reduce((sum, order) => sum + order['Quantity'], 0);
-    document.getElementById('unitsSold').textContent = `${unitsSold.toFixed(1)} rb`;
+    document.getElementById('unitsSold').textContent = `${unitsSold.toFixed(1)} `;
 
     // Menghitung jumlah customer
     const totalCustomers = new Set(data.map(order => order['Customer ID'])).size;
