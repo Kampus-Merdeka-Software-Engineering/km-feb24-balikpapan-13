@@ -142,13 +142,13 @@ fetch('superstore.json')
       datasets: [{
         label: 'Sales',
         data: salesData,
-        borderColor: "#5CB3FF",
-        backgroundColor: "#5CB3FF"
+        borderColor: "#ECB176",
+        backgroundColor: "#ECB176"
       }, {
         label: 'Profit',
         data: profitData,
-        borderColor: "#79BAEC",
-        backgroundColor: "#79BAEC"
+        borderColor: "#A67B5B",
+        backgroundColor: "#A67B5B"
       }]
     };
 
