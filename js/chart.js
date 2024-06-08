@@ -128,8 +128,6 @@ fetch('superstore.json')
 
 
 
-
-
 // Chart 3
 fetch('superstore.json')
   .then(response => response.json())
@@ -161,13 +159,47 @@ fetch('superstore.json')
     };
 
     var options3 = {
+      responsive: true,
       title: {
         display: true,
         text: "Sales & Profit by Category"
       },
       scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Category'
+          }
+        },
         y: {
-          beginAtZero: true
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Amount'
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            font: {
+              size: 14
+            }
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              let label = context.dataset.label || '';
+              if (label) {
+                label += ': ';
+              }
+              label += context.raw.toLocaleString();
+              return label;
+            }
+          }
         }
       }
     };
@@ -182,6 +214,7 @@ fetch('superstore.json')
   .catch(error => {
     console.error('Error fetching JSON data:', error);
   });
+
 
 
 
@@ -210,17 +243,43 @@ fetch('superstore.json')
     };
 
     var options4 = {
-      title: {
-        display: true,
-        text: "Discount Rate/Category (%)"
-      },
-      scales: {
-        y: {
-          beginAtZero: true
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: "Discount Rate/Category (%)"
+        },
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            font: {
+              size: 14
+            }
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              let label = context.label || '';
+              if (label) {
+                label += ': ';
+              }
+              label += context.raw.toFixed(2) + '%';
+              return label;
+            }
+          }
+        },
+        datalabels: {
+          display: true,
+          formatter: (value, context) => {
+            return value.toFixed(2) + '%';
+          },
+          color: '#fff',
+          font: {
+            weight: 'bold'
+          }
         }
-      },
-      legend: {
-        display: false
       }
     };
 
