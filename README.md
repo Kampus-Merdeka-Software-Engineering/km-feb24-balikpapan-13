@@ -30,7 +30,6 @@ Our project is a collaborative effort by the following team members:
 ## Technologies Used
 - **HTML**: Structure of the dashboard
 - **CSS**: Styling and layout
-- **Bootsrap**: For Landing Page and Navigation Bar
 - **JavaScript**: Interactivity and chart implementations (using Chart.js)
 - **Chart.js**: Library for creating charts
 
