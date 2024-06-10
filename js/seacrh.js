@@ -1,37 +1,3 @@
-// function searchFunction() {
-//     const searchRes = document.getElementById('searchResults')
-//     searchRes.innerHTML = '<p> tes</p>'
-//     // const input = document.getElementById('searchInput').value.toLowerCase();
-//     // fetch('superstore.json')
-//     //     .then(response => response.json())
-//     //     .then(data => {
-
-//     //         document.querySelector('.cardBox').innerHTML = '';
-//     //         console.log(data)
-          
-//     //         const filteredData = data.filter(item => {
-                
-//     //             return item['Customer Name'].toLowerCase().includes(input);
-//     //         });
-
-            
-//     //         filteredData.forEach(item => {
-//     //             const card = document.createElement('div');
-//     //             card.classList.add('card');
-//     //             const cardContent = `
-//     //                 <div>
-//     //                     <div class="numbers">${item['Sales']}</div>
-//     //                     <div class="cardName">${item['Customer Name']}</div>
-//     //                 </div>
-//     //                 <div class="iconbox">
-//     //                     <ion-icon name="cart-outline"></ion-icon>
-//     //                 </div>`;
-//     //             card.innerHTML = cardContent;
-//     //             document.querySelector('.cardBox').appendChild(card);
-//     //         });
-//     //     })
-//     //     .catch(error => console.error('Error:', error));
-// }
 
 function searchSuperstore() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
