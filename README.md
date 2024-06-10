@@ -4,7 +4,7 @@
 Welcome to the Superstore Dashboard! This project is designed to provide comprehensive data analytics for a superstore, offering insights into sales, profits, and other key metrics through interactive charts and visualizations.
 
 ## Features
-- **Interactive Charts**: Various types of charts (pie, bar, doughnut) to visualize data effectively.
+- **Interactive Charts**: Various types of charts (pie, bar, doughnut & etc.) to visualize data effectively.
 - **Responsive Design**: Ensures the dashboard looks good on all devices.
 - **Search**: To find the data of customer name and product name in superstore.json.
 
@@ -16,16 +16,40 @@ Welcome to the Superstore Dashboard! This project is designed to provide compreh
 ## Team Members
 Our project is a collaborative effort by the following team members:
 
-- **Julia Ressi Irrenova Yulistia** as Team Leader
-- **Deni Kristanto** as Front-End Developer
-- **Defrizal Arif Rahma** as Front-End Developer
-- **Melly Isnulsari** as Deployment
-- **Akhirul Abqar** as Deployment
-- **Anggita Dwi Sulistiani** as Pitch Deck
-- **Sanny Mariani Hisarma** as Pitch Deck
-- **Paskah Magdalena S.** as Pitch Deck
-- **Ririn Nur Fatimah** as Quality Assurance
-- **Alvinida Khafiah** as Quality Assurance
+# Project Team Members
+
+---
+
+## Team Leader
+- Julia Ressi Irrenova Yulistia
+
+---
+
+## Front-End Developers
+- Deni Kristanto
+- Defrizal Arif Rahma
+
+---
+
+## Deployment Team
+- Melly Isnulsari
+- Akhirul Abqar
+
+---
+
+## Pitch Deck Team
+- Anggita Dwi Sulistiani
+- Sanny Mariani Hisarma
+- Paskah Magdalena S.
+
+---
+
+## Quality Assurance Team
+- Ririn Nur Fatimah
+- Alvinida Khafiah
+
+---
+
 
 ## Technologies Used
 - **HTML**: Structure of the dashboard
