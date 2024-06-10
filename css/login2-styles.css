@@ -5,7 +5,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to bottom, #ff6600, #66ccff);
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
 }
 
@@ -100,4 +102,3 @@ body {
     margin-right: 450px;
   }
 
-  
