@@ -3,11 +3,11 @@ fetch('superstore.json')
 .then(data => {
     // Menghitung total profit
     const totalProfit = data.reduce((sum, order) => sum + order['Profit'], 0);
-    document.getElementById('totalProfit').textContent = `$${totalProfit.toFixed(2)} `;
+    document.getElementById('totalProfit').textContent = `$${totalProfit.toFixed(0)} `;
 
     // Menghitung total sales
     const totalSales = data.reduce((sum, order) => sum + order['Sales'], 0);
-    document.getElementById('totalSales').textContent = `$${totalSales.toFixed(2)} `;
+    document.getElementById('totalSales').textContent = `$${totalSales.toFixed(0)} `;
 
     // Menghitung total order
     const totalOrders = data.length;
@@ -15,7 +15,7 @@ fetch('superstore.json')
 
     // Menghitung unit terjual
     const unitsSold = data.reduce((sum, order) => sum + order['Quantity'], 0);
-    document.getElementById('unitsSold').textContent = `${unitsSold.toFixed(1)} `;
+    document.getElementById('unitsSold').textContent = `${unitsSold.toFixed(0)} `;
 
     // Menghitung jumlah customer
     const totalCustomers = new Set(data.map(order => order['Customer ID'])).size;
