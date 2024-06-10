@@ -244,11 +244,11 @@ fetch('superstore.json')
 
     var options4 = {
       responsive: true,
+      title: {
+        display: true,
+        text: "Discount Rate/Category (%)"
+      },
       plugins: {
-        title: {
-          display: true,
-          text: "Discount Rate/Category (%)"
-        },
         legend: {
           display: true,
           position: 'top',
@@ -273,7 +273,7 @@ fetch('superstore.json')
         datalabels: {
           display: true,
           formatter: (value, context) => {
-            return value.toFixed(2) + '%';
+            return context.dataset.data[context.dataIndex] * 100 + '%';
           },
           color: '#fff',
           font: {
@@ -300,7 +300,6 @@ fetch('superstore.json')
   .then(data => {
     var regions = ["West", "East", "South", "Central"];
     var profitData = [];
-
     regions.forEach(region => {
       var regionProfit = data.filter(item => item.Region === region).reduce((sum, item) => sum + item.Profit, 0);
       profitData.push(regionProfit);
@@ -320,6 +319,12 @@ fetch('superstore.json')
     };
 
     var options5 = {
+      plugins: {
+        legend: {
+          display: true,
+          position: 'right'
+        }
+      },
       title: {
         display: true,
         text: "Profit by Region (%)"
@@ -328,9 +333,6 @@ fetch('superstore.json')
         y: {
           beginAtZero: true
         }
-      },
-      legend: {
-        display: false
       }
     };
 
