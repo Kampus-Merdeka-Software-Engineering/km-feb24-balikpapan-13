@@ -16,39 +16,16 @@ Welcome to the Superstore Dashboard! This project is designed to provide compreh
 ## Team Members
 Our project is a collaborative effort by the following team members:
 
-# Project Team Members
-
----
-
-## Team Leader
-- Julia Ressi Irrenova Yulistia
-
----
-
-## Front-End Developers
-- Deni Kristanto
-- Defrizal Arif Rahma
-
----
-
-## Deployment Team
-- Melly Isnulsari
-- Akhirul Abqar
-
----
-
-## Pitch Deck Team
-- Anggita Dwi Sulistiani
-- Sanny Mariani Hisarma
-- Paskah Magdalena S.
-
----
-
-## Quality Assurance Team
-- Ririn Nur Fatimah
-- Alvinida Khafiah
-
----
+- **Julia Ressi Irrenova Yulistia** as Team Leader
+- **Deni Kristanto** as Front-End Developer
+- **Defrizal Arif Rahma** as Front-End Developer
+- **Melly Isnulsari** as Deployment
+- **Akhirul Abqar** as Deployment
+- **Anggita Dwi Sulistiani** as Pitch Deck
+- **Sanny Mariani Hisarma** as Pitch Deck
+- **Paskah Magdalena S.** as Pitch Deck
+- **Ririn Nur Fatimah** as Quality Assurance
+- **Alvinida Khafiah** as Quality Assurance
 
 
 ## Technologies Used
