@@ -338,7 +338,7 @@ button:hover {
 
 /* sponsors */
 .section-with-bg {
-  background: url('../imgsponsors.png') no-repeat center center;
+  background: url('../img/sponsors.png') no-repeat center center;
   background-size: cover;
   padding: 60px 0;
   position: relative;

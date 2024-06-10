@@ -9,6 +9,14 @@ document.getElementById('show-password').addEventListener('change', function() {
     confirmPasswordField.type = type;
 });
 
+document.getElementById('show-password').addEventListener('change', function() {
+    const passwordField = document.getElementById('login-password');
+    const confirmPasswordField = document.getElementById('confirm-password');
+    const type = this.checked ? 'text' : 'password';
+    passwordField.type = type;
+    confirmPasswordField.type = type;
+});
+
 
 if (registerForm) {
     registerForm.addEventListener('submit', function(event) {

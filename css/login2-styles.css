@@ -86,3 +86,18 @@ body {
 .register-link a:hover {
     text-decoration: underline;
 }
+
+
+
+.show-password-label {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .show-password-label input[type="checkbox"] {
+    margin-right: 450px;
+  }
+
+  
