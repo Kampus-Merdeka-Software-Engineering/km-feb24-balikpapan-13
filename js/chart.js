@@ -5,7 +5,6 @@ fetch('superstore.json')
     var years = [2014, 2015, 2016, 2017];
     var profitData = [];
     var salesData = [];
-
     years.forEach(year => {
       var filteredData = data.filter(item => item.Year === year);
       var totalProfit = filteredData.reduce((sum, item) => sum + item.Profit, 0);
