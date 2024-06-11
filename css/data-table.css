@@ -1,0 +1,20 @@
+#dataTable {
+    border-collapse: collapse;
+    border: 1px solid #dee2e6;
+  }
+  
+  #dataTable th,
+  #dataTable td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    color: #333333; /* Warna hitam */
+  }
+  
+  #dataTable thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  #dataTable tbody td {
+    background-color: #fff;
+  }

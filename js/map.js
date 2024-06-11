@@ -23,7 +23,7 @@ fetch('superstore.json')
 
         // Membuat marker untuk setiap negara dengan data penjualan
         for (const country in salesByCountry) {
-            // Mendapatkan koordinat latitude dan longitude untuk negara (Anda dapat menggunakan layanan geocoding)
+            // Mendapatkan koordinat latitude dan longitude untuk negara
             const lat = getLatitude(country);
             const lng = getLongitude(country);
 
@@ -36,11 +36,8 @@ fetch('superstore.json')
         console.error('Error:', error);
     });
 
-// Fungsi untuk mendapatkan latitude berdasarkan nama negara (implementasi contoh)
+// Fungsi untuk mendapatkan latitude berdasarkan nama negara
 function getLatitude(country) {
-    // Implementasikan logika untuk mendapatkan latitude berdasarkan nama negara
-    // Misalnya, menggunakan layanan geocoding atau data koordinat yang telah didefinisikan sebelumnya
-    // Contoh sederhana:
     if (country === 'United States') {
         return 37.0902;
     }
@@ -48,18 +45,13 @@ function getLatitude(country) {
     if (country === 'United States') {
         return 37.0902;
     }
-    // Tambahkan kondisi untuk negara lainnya
     return 0;
 }
 
-// Fungsi untuk mendapatkan longitude berdasarkan nama negara (implementasi contoh)
+
 function getLongitude(country) {
-    // Implementasikan logika untuk mendapatkan longitude berdasarkan nama negara
-    // Misalnya, menggunakan layanan geocoding atau data koordinat yang telah didefinisikan sebelumnya
-    // Contoh sederhana:
     if (country === 'United States') {
         return -95.7129;
     }
-    // Tambahkan kondisi untuk negara lainnya
     return 0;
 }

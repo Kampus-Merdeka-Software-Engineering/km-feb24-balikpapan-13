@@ -6,77 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superstore Dashboard</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/dash-styles.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 </head>
 
 <body>
     
     <header>
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                    <img src="/img/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="Superstore logo">
-                    Superstore Dashboard
-                </a>
-            </nav>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <nav>
+            <div class="container nav-wrapper">
+                <div class="brand">
+                    <span class="icon-container">
+                        <img src="img/favicon.ico" alt="superstore-icon">
+                        <strong>SUPERSTORE DASHBOARD</strong>
+                      </span>
+                    
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list">
+                    <li class="active">
+                        <a href="index.html">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Analytics
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="geomaps.html">Geomaps</a>
-                            <a class="dropdown-item" href="scatter.html">Scatter Plot</a>
-                            <a class="dropdown-item" href="datatable.html">Data Tables</a>
-                            <a class="dropdown-item" href="rank-sub.html">Rank Sub Category</a>
-                            <a class="dropdown-item" href="https://lookerstudio.google.com/u/1/reporting/39bd861e-6128-4604-88ee-293b566b1cf4/page/F7WwD">Looker Studio</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="about-us.html">About us</a>
-                        </div>
+                    <li>
+                        <a href="#">Analytics</a>
+                        <ul class="dropdown-list">
+                            <li><a href="geomaps.html">Geomaps</a></li>
+                            <li><a href="scatter.html">Scatter Plot</a></li>
+                            <li><a href="datatable.html">Data Table</a></li>
+                            <li><a href="rank-sub.html">Rank Sub Category</a></li>
+                            <li><a href="https://lookerstudio.google.com/u/1/reporting/39bd861e-6128-4604-88ee-293b566b1cf4/page/F7WwD">Looker Studio</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Logout</a>
-                    </li>
-
+                    <li><a href="about-us.html">About Team</a></li>
+                    <li><a href="login.html">Logout</a></li>
                 </ul>
-                    <!-- </form> -->
-                    <input class="form-control mr-sm-2" style="width: 20%;" type="search" id="searchInput" placeholder="Search Data" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="searchButton">Search</button>
+                
+            </div>
+            
+        
         </nav>
+            
+                
 
-        <!-- Modal -->
-  <div class="modal fade text-dark" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="searchModalLabel">Search Results</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body text-dark" id="searchResults">
-          <!-- Hasil pencarian akan ditampilkan di sini -->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
   
         <!-- cards -->
         <div class="cardBox">
@@ -136,6 +114,7 @@
             </div>
         </div>
         <!-- Dashboardd -->
+       
         <ul class="charts">
             <div class="chart" id="linechart">
                 <canvas id="myChart1" style="width:400%;"></canvas>
@@ -162,7 +141,6 @@
                 <canvas id="myChart6" style="width:400%;"></canvas>
             </div>
         </ul>
-
                     <!-- Footer content aa-->
                     <footer id="footer">
 
@@ -177,10 +155,8 @@
                         </div>
                       </footer>
                 <script src="js/chart.js" defer></script>
-                <script src="js/seacrh.js" defer></script>
                 <script src="js/card.js" defer></script>
-                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                <script src="js/navbar.js" defer></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </body>
 

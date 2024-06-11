@@ -8,62 +8,53 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="stylesheet" href="css/dash-styles.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/geomaps.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        #map {
-            height: 500px;
-            width: 100%;
-        }
-    </style>
   
 </head>
 
 <body>
     <header>
         <!-- Navigationn -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                    <img src="/img/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
-                    Superstore Geomaps
-                </a>
-            </nav>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="dash.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Analytics
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="geomaps.html">Geomaps</a>
-                          <a class="dropdown-item" href="scatter.html">Scatter Plot</a>
-                          <a class="dropdown-item" href="datatable.html">Data Tables</a>
-                          <a class="dropdown-item" href="rank-sub.html">Rank Sub Category</a>
-                          <a class="dropdown-item" href="https://lookerstudio.google.com/u/1/reporting/39bd861e-6128-4604-88ee-293b566b1cf4/page/F7WwD">Looker Studio</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="about-us.html">About us</a>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Logout</a>
-                    </li>
-                    
-                </ul>
-                    <input class="form-control mr-sm-2" style="width: 20%;" type="search" id="searchInput" placeholder="Search Data" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="button" id="searchButton">Search</button>
-                 
-        </nav>
+        <nav>
+          <div class="container nav-wrapper">
+              <div class="brand">
+                  <span class="icon-container">
+                      <img src="img/favicon.ico" alt="superstore-icon">
+                      <strong>SUPERSTORE GEOMAPS</strong>
+                    </span>
+                  
+              </div>
+              <div class="hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+              <ul class="nav-list">
+                  <li>
+                      <a href="dash.html">Home</a>
+                  </li>
+                  <li>
+                      <a href="#">Analytics</a>
+                      <ul class="dropdown-list">
+                          <li><a href="geomaps.html">Geomaps</a></li>
+                          <li><a href="scatter.html">Scatter Plot</a></li>
+                          <li><a href="datatable.html">Data Table</a></li>
+                          <li><a href="rank-sub.html">Rank Sub Category</a></li>
+                          <li><a href="https://lookerstudio.google.com/u/1/reporting/39bd861e-6128-4604-88ee-293b566b1cf4/page/F7WwD">Looker Studio</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="about-us.html">About Team</a></li>
+                  <li><a href="login.html">Logout</a></li>
+                  
+              </ul>
+              
+          </div>
+          
+      
+      </nav>
 
         <!-- Modal -->
   <div class="modal fade text-dark" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
@@ -103,11 +94,8 @@
         </footer>
           
         <script src="js/chart.js" defer></script>
-        <script src="js/seacrh.js" defer></script>
         <script src="js/map.js" defer></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        <script src="js/navbar.js" defer></script>
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </body>
 
