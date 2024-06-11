@@ -22,7 +22,7 @@ fetch('superstore.json')
         fill: false
       }, {
         label: "sales",
-        borderColor: "#254336",
+        borderColor: "#B5C18E",
         data: salesData,
         fill: false
       }]
@@ -412,8 +412,8 @@ fetch('superstore.json')
   var data = {
     datasets: [{
       label: "Technology",
-      borderColor: "#43766C",
-      backgroundColor: "#43766C",
+      borderColor: "#81A263",
+      backgroundColor: "#81A263",
       data: technologyPoints,
     }, {
       label: "Furniture",
