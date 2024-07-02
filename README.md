@@ -1,5 +1,5 @@
 # Capstone Project Final Score
-![Capstone Result](img/Team%13.png)
+![Capstone Result](img/Team13.png)
 
 # Superstore Dashboard
 
