@@ -6,8 +6,12 @@
   <img src="img/shopping_cart.png" alt="Project Logo" style="width: 200px; />
 </p>
 
+
+
 ## Support
 We appreciate your support!
+
+
 <table>
   <tr>
     <td align="center">
