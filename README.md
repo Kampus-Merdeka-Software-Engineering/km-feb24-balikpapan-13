@@ -9,13 +9,17 @@
 
 We appreciate your support!
 
-<p align="center">
-  <img src="img/kampus_merdeka.png" alt="Support Us" />
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img src="img/kampus_merdeka.png" alt="Kampus Merdeka" style="width:200px;"/>
+    </td>
+    <td align="center">
+      <img src="img/revou-1.png" alt="RevoU" style="width:200px;"/>
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="img/revou-1.png" alt="Support Us" />
-</p>
 ## Project Overview
 Welcome to the Superstore Dashboard! This project is designed to provide comprehensive data analytics for a superstore, offering insights into sales, profits, and other key metrics through interactive charts and visualizations.
 
@@ -48,6 +52,7 @@ Our project is a collaborative effort by the following team members:
 - **CSS**: Styling and layout
 - **JavaScript**: Interactivity and chart implementations (using Chart.js)
 - **Chart.js**: Library for creating charts
+- **netlify**: Deployment platform for hosting and continuous deployment
 
 ## Setup Instructions
 1. Clone the repository to your local machine.
