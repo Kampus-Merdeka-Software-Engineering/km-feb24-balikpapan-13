@@ -6,7 +6,6 @@ Welcome to the Superstore Dashboard! This project is designed to provide compreh
 ## Features
 - **Interactive Charts**: Various types of charts (pie, bar, doughnut & etc.) to visualize data effectively.
 - **Responsive Design**: Ensures the dashboard looks good on all devices.
-- **Search**: To find the data of customer name and product name in superstore.json.
 
 ## <summary><strong>Tools:</strong></summary>
 <p>
