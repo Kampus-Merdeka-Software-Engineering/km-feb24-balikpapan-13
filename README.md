@@ -45,7 +45,7 @@ Our project is a collaborative effort by the following team members:
     ```bash
     cd km-feb24-balikpapan-13
     ```
-3. Open `index.html` in your web browser to view the dashboard, or visit our website team : https://km-feb24-balikpapan-13.vercel.app/
+3. Open `index.html` in your web browser to view the dashboard, or visit our website team : https://km-feb24-balikpapan-13.netlify.app/
 
 
 ## Contact Information
