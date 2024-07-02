@@ -1,6 +1,3 @@
-# Capstone Project Final Score
-![Capstone Result](img/Team-13.png)
-
 # Superstore Dashboard
 
 <p align="center">
@@ -10,14 +7,16 @@
 ## Support
 We appreciate your support!
 
-<div style="display: flex; justify-content: center; margin-top: 20px;">
-  <div style="margin-right: 20px;">
-    <img src="img/kampus_merdeka.png" alt="Kampus Merdeka" style="width: 200px;">
-  </div>
-  <div style="margin-left: 20px;">
-    <img src="img/revou-1.png" alt="RevoU" style="width: 200px;">
-  </div>
-</div>
+<table>
+  <tr>
+    <td align="center">
+      <img src="img/kampus_merdeka.png" alt="Kampus Merdeka" style="width:200px;"/>
+    </td>
+    <td align="center">
+      <img src="img/revou-1.png" alt="RevoU" style="width:200px;"/>
+    </td>
+  </tr>
+</table>
 
 ## Project Overview
 Welcome to the Superstore Dashboard! This project is designed to provide comprehensive data analytics for a superstore, offering insights into sales, profits, and other key metrics through interactive charts and visualizations.
@@ -63,6 +62,8 @@ Our project is a collaborative effort by the following team members:
     cd km-feb24-balikpapan-13
     ```
 3. Open `index.html` in your web browser to view the dashboard, or visit our website team : https://km-feb24-balikpapan-13.netlify.app/
+# Capstone Project Final Score
+![Capstone Result](img/Team-13.png)
 
 
 ## Contact Information
