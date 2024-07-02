@@ -27,7 +27,11 @@ Welcome to the Superstore Dashboard! This project is designed to provide compreh
 
 ## <summary><strong>Tools:</strong></summary>
 <p>
-    <img src="https://img.shields.io/badge/Text%20Editor-Visual%20Studio%20Code-blue?&logo=visual%20studio%20code&logoColor=blue" />
+  <img src="https://img.shields.io/badge/Text%20Editor-Visual%20Studio%20Code-blue?&logo=visual%20studio%20code&logoColor=blue" />
+  <img src="https://img.shields.io/badge/Spreadsheet-Excel-green?logo=microsoft%20excel&logoColor=green" />
+  <img src="https://img.shields.io/badge/Kaggle-Competitions-yellow?logo=kaggle&logoColor=yellow" />
+  <img src="https://img.shields.io/badge/Looker%20Studio-Data%20Visualization-purple?logo=looker&logoColor=purple" />
+  <img src="https://img.shields.io/badge/Convert%20CSV%20to%20JSON-Utility-orange" />
 </p>
 
 ## Team Members
