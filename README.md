@@ -9,14 +9,16 @@
 ## Support
 We appreciate your support!
 
-<div style="display: flex; justify-content: center;">
-  <div style="margin-right: 20px;">
-    <img src="img/kampus_merdeka.png" alt="Kampus Merdeka" style="width: 200px;">
-  </div>
-  <div style="margin-left: 20px;">
-    <img src="img/revou-1.png" alt="RevoU" style="width: 200px;">
-  </div>
-</div>
+<table>
+  <tr>
+    <td align="center">
+      <img src="img/kampus_merdeka.png" alt="Kampus Merdeka" style="width:200px;"/>
+    </td>
+    <td align="center">
+      <img src="img/revou-1.png" alt="RevoU" style="width:200px;"/>
+    </td>
+  </tr>
+</table>
 
 ## Project Overview
 Welcome to the Superstore Dashboard! This project is designed to provide comprehensive data analytics for a superstore, offering insights into sales, profits, and other key metrics through interactive charts and visualizations.
