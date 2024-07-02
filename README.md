@@ -8,7 +8,6 @@
 
 ## Support
 We appreciate your support!
-
 <table>
   <tr>
     <td align="center">
@@ -19,7 +18,6 @@ We appreciate your support!
     </td>
   </tr>
 </table>
-
 ## Project Overview
 Welcome to the Superstore Dashboard! This project is designed to provide comprehensive data analytics for a superstore, offering insights into sales, profits, and other key metrics through interactive charts and visualizations.
 
