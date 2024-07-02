@@ -3,7 +3,7 @@
 
 # Superstore Dashboard
 <p align="center">
-  <img src="img/shopping_cart.png" alt="Project Logo" />
+  <img src="img/shopping_cart.png" alt="Project Logo" style="width: 200px; />
 </p>
 
 ## Support
