@@ -2,7 +2,20 @@
 ![Capstone Result](img/Team-13.png)
 
 # Superstore Dashboard
+<p align="center">
+  <img src="img/shopping_cart.png" alt="Project Logo" />
+</p>
+## Support
 
+We appreciate your support!
+
+<p align="center">
+  <img src="img/kampus_merdeka.png" alt="Support Us" />
+</p>
+
+<p align="center">
+  <img src="img/revou-1.png" alt="Support Us" />
+</p>
 ## Project Overview
 Welcome to the Superstore Dashboard! This project is designed to provide comprehensive data analytics for a superstore, offering insights into sales, profits, and other key metrics through interactive charts and visualizations.
 
