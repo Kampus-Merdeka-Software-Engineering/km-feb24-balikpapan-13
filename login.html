@@ -16,9 +16,10 @@
         <form class="login-form" id="login-form" action="">
             <input type="email" id="login-email" name="email" placeholder="Enter Email" required>
             <input type="password" id="login-password" name="password" placeholder="Enter Password" required>
-            <label class="show-password-label">
-                <input type="checkbox" id="show-password"> Show Password
-            </label>
+            <div class="show-password-container">
+                <input type="checkbox" id="show-password">
+                <label for="show-password">Show Password</label>
+            </div>
             <button type="submit">Login</button>
         </form>
         <div id="login-error-message" style="color: red; display: none;">Error message</div>
